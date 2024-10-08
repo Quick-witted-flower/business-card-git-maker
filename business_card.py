@@ -49,16 +49,18 @@ def create_contacts(contact_type, count):
     
     return contacts
 
-print("Wizytówki firmowe:")
-business_contacts = create_contacts('business', 3)
-for contact in business_contacts:
-    contact.contact()
-    print(f"Długość etykiety: {contact.label_length}\n")
+if __name__ == "__main__":
 
-print("Wizytówki bazowe:")
-base_contacts = create_contacts('base', 2)
-for contact in base_contacts:
-    contact.contact()
-    print(f"Długość etykiety: {contact.label_length}\n")
+    print("Wizytówki firmowe:")
+    business_contacts = create_contacts('business', 3)
+    for contact in business_contacts:
+        contact.contact()
+        print(f"Długość etykiety: {contact.label_length}\n")
+
+    print("Wizytówki bazowe:")
+    base_contacts = create_contacts('base', 2)
+    for contact in base_contacts:
+        contact.contact()
+        print(f"Długość etykiety: {contact.label_length}\n")
 
 
